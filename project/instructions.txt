@@ -1,0 +1,31 @@
+Steps to run the project:
+
+1. Open Command Prompt (cmd):
+   - Press Windows key + R
+   - Type "cmd" and press Enter
+   OR
+   - Open File Explorer
+   - Navigate to your project folder
+   - Click in the address bar
+   - Type "cmd" and press Enter
+
+2. Navigate to project directory:
+   cd C:\Users\Alexandra\Documents\APP\project-bolt-sb1-vjf3z7ck\project
+
+3. Start the development server:
+   - For web preview: npm run dev
+   - For phone preview: npx expo start --tunnel
+
+4. To view on phone:
+   - Install "Expo Go" app from App Store (iOS) or Play Store (Android)
+   - Make sure your phone and computer are on the same WiFi network
+   - Open Expo Go app
+   - Scan the QR code shown in the terminal
+   - Wait for the app to load
+
+Note: If you get 'npm not recognized' error:
+1. Install Node.js from: https://nodejs.org/
+2. Restart your computer
+3. Try the commands again
+
+Important: Each time you close the Command Prompt, you'll need to repeat these steps to start the server again. Your code changes are saved automatically, but the server needs to be restarted to view the app. 

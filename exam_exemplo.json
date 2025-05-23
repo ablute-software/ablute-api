@@ -1,0 +1,37 @@
+{
+    "user_id": "U001",
+    "exam_id": "EX20240522",
+    "profile": {
+        "name": "Luísa Silva",
+      "age": 47,
+      "sex": "feminino",
+      "last_exam_weeks_ago": 8,
+      "symptoms": ["pele seca"],
+      "notes": ["sedentarismo moderado", "stress laboral"]
+    },
+    "biomarkers": {
+      "nitrites": "negativo",
+      "NGAL": "78 pg/mL",
+      "MCP-1": "0.9 mg/L",
+      "8-OHdG": "6.4 mg/g Cr",
+      "creatinine": "0.74 mg/dL",
+      "albumin": "40 mg/g Cr",
+      "glucose": "10 mg/dL",
+      "NT-proBNP": "85 pg/mL"
+    },
+    "feces": {
+      "bristol": 2,
+      "volume": "pequeno",
+      "consistencia": "fragmentada"
+    },
+    "historico": {
+      "data_ultima_analise": "2025-03-27",
+      "resumo_anterior": {
+        "interpretacao_inicial": "Stress oxidativo leve e obstipação funcional.",
+        "tema_principal": "pele seca + digestão lenta",
+        "alertas": ["8-OHdG no limite", "Bristol tipo 2"],
+        "acao_recomendada": "hidratar melhor e melhorar trânsito intestinal",
+        "foi_repetido_rapidamente": true
+      }
+    }
+  }
