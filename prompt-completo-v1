@@ -1,0 +1,19 @@
+import openai
+
+# ⚠️ A chave API da OpenAI
+openai.api_key = "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"
+
+# Lê o conteúdo do prompt
+with open("prompt_ablute.txt", "r", encoding="utf-8") as f:
+    prompt_instructions = f.read()
+
+# Criação do Assistant
+assistant = openai.beta.assistants.create(
+    name="Relatório Clínico ablute_",
+    instructions=prompt_instructions,
+    model="gpt-4o",
+    tools=[],
+)
+
+print("✅ Assistant criado com sucesso!")
+print("Assistant ID:", assistant.id)
