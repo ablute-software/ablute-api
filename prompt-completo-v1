@@ -1,7 +1,8 @@
 import openai
 
 # ⚠️ A chave API da OpenAI
-openai.api_key = "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"
+import os
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Lê o conteúdo do prompt
 with open("prompt_ablute.txt", "r", encoding="utf-8") as f:
