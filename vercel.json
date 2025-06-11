@@ -1,14 +1,14 @@
 {
   "version": 2,
   "functions": {
-    "api/*.ts": {
-      "runtime": "vercel-node@canary"
+    "api/*.js": {
+      "runtime": "nodejs18.x"
     }
   },
   "routes": [
     {
       "src": "/api/gerar-relatorio",
-      "dest": "api/gerar-relatorio.ts"
+      "dest": "api/gerar-relatorio.js"
     }
   ]
 }
