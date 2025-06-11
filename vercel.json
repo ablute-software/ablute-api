@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/gerar-relatorio.ts",
-      "use": "@vercel/node"
+  "functions": {
+    "api/*.ts": {
+      "runtime": "vercel-node@canary"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/api/gerar-relatorio",
