@@ -1,14 +1,14 @@
 {
   "version": 2,
   "functions": {
-    "api/*.js": {
+    "api/gerar-relatorio/index.js": {
       "runtime": "nodejs18.x"
     }
   },
   "routes": [
     {
       "src": "/api/gerar-relatorio",
-      "dest": "api/gerar-relatorio.js"
+      "dest": "api/gerar-relatorio/index.js"
     }
   ]
 }
