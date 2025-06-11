@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "functions": {
-    "api/*.ts": {
-      "runtime": "nodejs18.x"
+  "builds": [
+    {
+      "src": "api/gerar-relatorio.ts",
+      "use": "@vercel/node"
     }
-  }
+  ],
+  "routes": [
+    {
+      "src": "/api/gerar-relatorio",
+      "dest": "api/gerar-relatorio.ts"
+    }
+  ]
 }
