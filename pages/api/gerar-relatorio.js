@@ -42,8 +42,7 @@ export default async function handler(req, res) {
     const output = completion.choices[0].message.content;
 
     try {
-      const parsed = JSON.parse(output);
-      res.status(200).json({ relatorio: parsed });
+     res.status(200).json({ relatorio: output });
     } catch {
       res.status(500).json({ error: "A resposta não é JSON válido", raw: output });
     }
