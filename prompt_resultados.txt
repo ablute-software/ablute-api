@@ -88,3 +88,6 @@ Esta versão do prompt está preparada para **integrar um resumo estruturado da 
   "conclusao": "...",
   "nova_analise": "..."
 }
+
+# EOF - atualização forçada para deploy
+
