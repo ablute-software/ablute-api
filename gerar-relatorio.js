@@ -20,7 +20,9 @@ export default async function handler(req, res) {
 
   let prompt;
   try {
-    prompt = await fs.readFile("prompt_resultados.txt", "utf-8");
+  import path from "path";
+const filePath = path.join(process.cwd(), "prompt_resultados.txt");
+prompt = await fs.readFile(filePath, "utf-8");
   } catch (err) {
     res.status(500).json({ error: "Erro ao ler o prompt", detalhe: err.message });
     return;
