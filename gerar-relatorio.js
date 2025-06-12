@@ -1,4 +1,5 @@
 import fs from "fs/promises";
+import path from "path";
 import OpenAI from "openai";
 
 const openai = new OpenAI({
@@ -20,9 +21,8 @@ export default async function handler(req, res) {
 
   let prompt;
   try {
-  import path from "path";
-const filePath = path.join(process.cwd(), "prompt_resultados.txt");
-prompt = await fs.readFile(filePath, "utf-8");
+    const filePath = path.join(process.cwd(), "prompt_resultados.txt");
+    prompt = await fs.readFile(filePath, "utf-8");
   } catch (err) {
     res.status(500).json({ error: "Erro ao ler o prompt", detalhe: err.message });
     return;
@@ -43,11 +43,12 @@ prompt = await fs.readFile(filePath, "utf-8");
 
     const output = completion.choices[0].message.content;
 
+    // ⚠️ Tentamos fazer parse como JSON. Se falhar, devolvemos o texto diretamente.
     try {
       const parsed = JSON.parse(output);
       res.status(200).json({ relatorio: parsed });
     } catch {
-      res.status(500).json({ error: "A resposta não é JSON válido", raw: output });
+      res.status(200).json({ relatorio: output });
     }
   } catch (err) {
     res.status(500).json({ error: "Erro OpenAI", detalhe: err.message });
