@@ -1,9 +1,12 @@
-export default function Home() {
+import React from 'react';
+
+const Home: React.FC = () => {
   return (
-    <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
-      <h1>ablute_ | Plataforma Web</h1>
-      <p>Esta é a versão de teste da aplicação em React.</p>
-    </div>
+    <main style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
+      <h1>ablute_ | Plataforma Clínica</h1>
+      <p>Versão de teste da aplicação React.</p>
+    </main>
   );
-}
-"// trigger redeploy" 
+};
+
+export default Home;
